@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.*; //imp-->reverse,odd,evensum
 
 public class forloop {
     public static void main(String[] args) {
@@ -32,30 +32,57 @@ public class forloop {
         // }
 
         //restore reverse 
-        int n=1234567890;
-        int l,r=0;
-        while(n>0){
-            l=n%10;
-            r=(r*10)+l;
-            n=n/10;
-        }
-        System.out.println(r);
+        // int n=1234567890;
+        // int l,r=0;
+        // while(n>0){
+        //     l=n%10;
+        //     r=(r*10)+l;
+        //     n=n/10;
+        // }
+        // System.out.println(r);
         
         //prime or not
-        int a=sc.nextInt();
-        int f=0;
-        for(int i=2;i<=a/2;i++){
-            if(a%i==0){
-                f=1;
-                break;
-            }
+        // int a=sc.nextInt();
+        // int f=0;
+        // for(int i=2;i<=a/2;i++){
+        //     if(a%i==0){
+        //         f=1;
+        //         break;
+        //     }
+        // }
+        // if(f==1){
+        // System.out.println("not p");
+        // }
+        // else{
+        // System.out.println("p");
+        // }
+        
+        //odd even int sum
+        // int n;
+        // int c=1;
+        // int se=0;
+        // int so=0;
+        // do{
+        //     n=sc.nextInt();
+        //     if(n%2==0){
+        //         se=se+n;
+        //     }
+        //     else{
+        //         so=so+n; 
+        //     }
+        //     c=sc.nextInt();
+        // }while(c==1);
+        // System.out.println("o "+so);       
+        // System.out.println("e "+se);
+        
+        //factorial
+        int n=sc.nextInt();
+        int fact=1;
+        for(int i=1;i<=n;i++){
+            fact*=i;
         }
-        if(f==1){
-        System.out.println("not p");
-        }
-        else{
-        System.out.println("p");
-        }
+        System.out.println("f "+fact);
+
         sc.close();
     }
 }
