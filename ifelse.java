@@ -6,7 +6,7 @@ public class ifelse {
         System.out.println("a: ");
         int a=sc.nextInt();
         System.out.println("b: ");
-        int b=sc.nextInt();
+        // int b=sc.nextInt();
 
         //largest of 2
         /*if(a>=b){
