@@ -1,4 +1,4 @@
-public class function {// dec to bin ,bin to dec
+public class function {// dec to bin ,bin to dec,//pallindrome no.
 
     public static int sum(int a,int b){//parameters
         return a+b;
@@ -39,6 +39,29 @@ public class function {// dec to bin ,bin to dec
         }
         return b;
     }
+
+    public static int sumd(int a) {
+        int s=0;
+        while(a>0){
+            s=s+(a%10);
+            a=a/10;
+        }
+        return s;
+
+    }
+    public static boolean pall(int a) {
+        int pal=a;
+        int r=0;
+        while(a>0){
+            int l=a%10;
+            r=(r*10)+l;
+            a=a/10;
+        }
+        if(pal==r){
+        return true;
+        }
+        return false;
+    }
     public static void main(String[] args) {
         /*int s=sum(4,5);//arguments
         System.out.println(s);
@@ -53,5 +76,10 @@ public class function {// dec to bin ,bin to dec
         System.out.println(s);
         int d=dtob(4);
         System.out.println(d);
+        int x=sumd(512521);
+        System.out.println(x);
+        boolean q=pall(125521);
+        System.out.println(q);
+
     }
 }
