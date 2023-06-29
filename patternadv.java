@@ -150,6 +150,47 @@ public class patternadv {
             System.out.println();
         }
     }
+    public static void number_pyramid(int n) {
+        // int c=1;
+        for(int i=1;i<=n;i++){
+            //space
+            for(int j=1;j<=n-i;j++){
+                System.out.print(' ');
+            }
+            // for(int j=1;j<=2*i-1;j++){
+            //     if(j%2!=0){
+
+            //         System.out.print(i);
+            //     }
+            //     else{
+            //         System.out.print(' ');
+            //     }
+            // }
+            //stars or
+            for(int j=1;j<=i;j++){
+                System.out.print(i+" ");
+            }
+            System.out.println();
+        }
+        
+    }
+    public static void pallin_pattern(int n) {
+        for (int i = 1; i <= n; i++) {
+          //space
+          for(int j=1;j<=n-i;j++){
+            System.out.print(' ');
+          }  
+          //numbers--desc
+          for(int j=i;j>=1;j--){
+            System.out.print(j);
+          }
+          //numbers-asc
+          for(int j=2;j<=i;j++){
+            System.out.print(j);
+          }
+          System.out.println();
+        }
+    }
     public static void main(String args[]) {
         // hollow_rectangle(5,4);
         // inverted_rotated_half_pyramid(5);
@@ -159,6 +200,8 @@ public class patternadv {
         // butterfly(5);
         // solid_rhombus(5);
         // hollow_rhombus(5);
-        diamond(5);
+        // diamond(5);
+        // number_pyramid(5);
+        pallin_pattern(5);
     }
 }
