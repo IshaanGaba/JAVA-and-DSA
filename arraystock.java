@@ -1,5 +1,5 @@
 // import java.util.*;
-public class stock {
+public class arraystock {
     public static int profit(int p[]) {
         //profit= sell-buy
         //sell should be max
