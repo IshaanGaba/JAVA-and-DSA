@@ -1,4 +1,5 @@
-import java.util.*;
+package array;
+// import java.util.*;
 public class array {
     public static int lsrch(int a[],int k) {
         for(int i=0;i<a.length;i++){
@@ -52,14 +53,35 @@ public class array {
             System.out.println(a[i]);
         }
     }
+    public static void pair(int a[]) {
+        for(int i=0;i<a.length;i++){
+            for(int j=i+1;j<a.length;j++){
+                System.out.println(a[i]+" "+a[j]);
+            }
+            System.out.println();
+        }
+    }
+    public static void sub(int a[]) {
+        for(int i=0;i<a.length;i++){
+            for(int j=i;j<a.length;j++){
+                for(int k=i;k<=j;k++){
+                    System.out.print(a[k]+" ");
+                }
+                System.out.println();
+            }
+            System.out.println();
+        }
+    }
     public static void main(String[] args) {
         int a[]={-5,20,-30,15,96};
         // int x=lsrch(a, 6);
         // System.out.println(x);
         // int x=large(a);
         // System.out.println(x);
-        System.out.println(bsrch(a, 15));
-        reverse(a);
+        // System.out.println(bsrch(a, 15));
+        // reverse(a);
+        // pair(a);
+        sub(a);
     }
     
 }

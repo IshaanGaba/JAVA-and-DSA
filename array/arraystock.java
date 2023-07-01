@@ -1,3 +1,4 @@
+package array;
 // import java.util.*;
 public class arraystock {
     public static int profit(int p[]) {
