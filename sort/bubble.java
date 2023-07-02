@@ -12,12 +12,12 @@ public class bubble {
                 a[j]=a[j+1];
                 a[j+1]=t;
             }
-            
+            if(flag==0){
+            break;
+            }
 
         }
-        if(flag==0){
-            break;
-        }
+        
         // System.out.println(flag);  
       }
       
