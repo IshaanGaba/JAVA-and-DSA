@@ -12,15 +12,18 @@ public class bubble {
                 a[j]=a[j+1];
                 a[j+1]=t;
             }
-            if(flag==0){
-                break;
-            }
+            
 
         }
-      }  
+        if(flag==0){
+            break;
+        }
+        // System.out.println(flag);  
+      }
+      
     }
     public static void main(String[] args) {
-        int a[]={5,4,1,2,3};
+        int a[]={1,2,3,5,4};
         bubblesort(a);
         for(int i=0;i<a.length;i++){
             System.out.println(a[i]);
