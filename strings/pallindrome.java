@@ -12,6 +12,8 @@ public class pallindrome {
         return true;
     }
     public static void main(String[] args) {
+        // String s=new String("noon");
+        // String s="noon";
         Scanner sc=new Scanner(System.in);
         String s=sc.nextLine();
         System.out.println(ispallindrome(s));
