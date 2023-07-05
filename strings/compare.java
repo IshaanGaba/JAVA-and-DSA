@@ -1,6 +1,6 @@
 package strings;
 
-public class compare {
+public class compare {//s.equals(s1)
     public static void main(String[] args) {
         String s="abc";
         String s2="abc";
@@ -12,6 +12,21 @@ public class compare {
             System.out.println(false);
         }
         if(s==s2){
+            System.out.println(true);
+            
+        }
+        else{
+            System.out.println(false);
+        }
+        System.out.println();
+        if(s.equals(s2)){
+            System.out.println(true);
+            
+        }
+        else{
+            System.out.println(false);
+        }
+        if(s.equals(s1)){
             System.out.println(true);
             
         }
