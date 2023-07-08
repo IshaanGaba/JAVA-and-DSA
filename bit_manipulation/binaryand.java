@@ -1,6 +1,6 @@
-package bit_mainpulation;
+package bit_manipulation;
 
-public class bitwiseand{
+public class binaryand{
     public static void main(String[] args) {
         System.out.println(5 & 6);
         /*5--0101 6--0110
