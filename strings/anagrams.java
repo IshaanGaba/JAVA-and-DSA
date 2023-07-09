@@ -8,11 +8,11 @@ public class anagrams {
         if(s.length()!=d.length()){
             return -1; 
         }
-        s=s.toLowerCase();
-        d=d.toLowerCase();
+        // s=s.toLowerCase();
+        // d=d.toLowerCase();
         char sa[]=s.toCharArray();
         char da[]=d.toCharArray();
-
+        // System.out.println("yes");
         Arrays.sort(sa);
         Arrays.sort(da);
         boolean result=Arrays.equals(sa,da);
@@ -23,8 +23,8 @@ public class anagrams {
 
     }
     public static void main(String[] args) {
-        String s="shaan";
-        String d="ishaan";
+        String s="name";
+        String d="Naem";
         System.out.println(anagram(s, d));
         
 
