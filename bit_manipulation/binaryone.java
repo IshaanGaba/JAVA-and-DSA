@@ -1,4 +1,3 @@
-package bit_manipulation;
 
 public class binaryone {
     public static void main(String[] args) {

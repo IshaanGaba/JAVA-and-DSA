@@ -1,4 +1,3 @@
-package bit_manipulation;
 
 public class binaryand{
     public static void main(String[] args) {

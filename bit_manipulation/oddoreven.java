@@ -1,4 +1,3 @@
-package bit_manipulation;
 
 public class oddoreven {
     public static String oe(int a) {
