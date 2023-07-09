@@ -15,6 +15,8 @@ public class anagrams {
         // System.out.println("yes");
         Arrays.sort(sa);
         Arrays.sort(da);
+        System.out.println(sa);
+        System.out.println(da);
         boolean result=Arrays.equals(sa,da);
         if(result){
             return 1;
