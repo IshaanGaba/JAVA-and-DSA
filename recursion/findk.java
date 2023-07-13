@@ -1,17 +1,21 @@
 package recursion;
 
 public class findk{
-    public static void bin(int n,String s,int last) {
-        if(n==0){
-            System.out.println(s);
-            return ;
+    public static void find(int n[],int k,int i) {
+        
+        if(i==n.length){
+            return;
         }
-        bin(n-1,s+"0",0);
-        if(last==0){
-            bin(n-1,s+"1",1);
+        
+        if(n[i]==k){
+            
+            System.out.println(i);
         }
+        find(n, k, i+1);
+
     }
     public static void main(String[] args) {
-        bin(2, "", 0);
+        int n[]={3,2,4,5,6,2,7,2,2};
+        find(n, 2, 0);
     }
 }
