@@ -1,9 +1,12 @@
 public class nqueen {
+    static int c=0;//for counting
     public static void queen(char board[][],int row) {
         //base
         if(row==board.length){
             print(board);
+            c++;
             return;
+            // return true;
         }
 
         //recursion
@@ -13,10 +16,14 @@ public class nqueen {
                 board[row][i]='Q';
 
                 queen(board, row+1);
+                // if(queen(board, row+1)){ for checking if soln exists or not
+                //     return true;
+                // }
                 board[row][i]='x';
 
             
         }
+        // return false;
     }
 }
     public static boolean isSafe(char b[][],int row,int col) {
@@ -59,6 +66,7 @@ public class nqueen {
             }
         }
         queen(b, 0);
+        System.out.println(c);
     }
 }
 
