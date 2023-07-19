@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class containerwithmostwater {
     public static int mostwater(ArrayList<Integer> height) {//n
+        //2 pointer approach
         int lp=0;
         int rp=height.size()-1;
         int max=0;
@@ -14,6 +15,9 @@ public class containerwithmostwater {
             max=Math.max(max, a);
             if(height.get(lp)<height.get(rp)){
                 lp++;
+                //think about 1 and 7.area=1*8
+                //rp-- say--->think about 1 and 3.area=1*7--area decreases
+                //think about 8 and 7.area=7*7=49--area increases
             }
             else{
                 rp--;
