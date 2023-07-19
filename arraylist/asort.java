@@ -2,7 +2,6 @@ package arraylist;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 
 public class asort {
     public static void main(String[] args) {
@@ -13,7 +12,7 @@ public class asort {
         list.add(2);
         list.add(4);
         // Collections.sort(list);
-        Collections.sort(list,Comparator.reverseOrder());//imp
+        Collections.sort(list,Collections.reverseOrder());//imp
         System.out.println(list);
         ArrayList<String> list1=new ArrayList<>();
         list1.add("john");
@@ -22,6 +21,7 @@ public class asort {
         list1.add("hello");
         list1.add("world");
         Collections.sort(list1);
+        // Collections.sort(list1,Collections.reverseOrder());//imp
         System.out.println(list1);
     }
 }
