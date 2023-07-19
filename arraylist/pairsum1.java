@@ -4,7 +4,7 @@ import java.util.ArrayList;
 //find pair where sum=target and we have SORTED arraylist
 public class pairsum1 {
     public static void sum(ArrayList<Integer> list,int target) {//n
-        //2 pointer approach
+        //2 pointer approach---SORTED
         int lp=0;
         int rp=list.size()-1;
         while (lp!=rp) {//(lp<rp)
