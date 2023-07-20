@@ -1,6 +1,6 @@
 package linked_list1;
 
-public class isearch {
+public class remove_nth_end {
     public class Node{
         int data;
         Node next;
@@ -28,24 +28,36 @@ public class isearch {
         newNode.next=head;
         head=newNode;
     }
-    //---------------------------search---------------------------------------
-    public int search(int target){
+    public int size(){
+        int s=0;
         if(head==null){
-            return -1;
+            return s;
         }
-        int i=0;
         Node temp=head;
-        while (temp!=null) {
-            if(temp.data==target){
-                return i;
-            }
-            i++;
+        while(temp!=null){
+            s++;
             temp=temp.next;
         }
-        return -1;
+        return s;
+    }
+    public void removen(int index){
+        if(index==size()){//delete head
+            head=head.next;
+            return;
+        }
+        int i=(size()-index);
+        
+        Node prev=head;
+        int j=1;
+        while(j<i){
+            prev=prev.next;//node to be removed ka previous
+            j++;
+        }
+        prev.next=prev.next.next;
+        
     }
     public static void main(String[] args) {
-        isearch ll=new isearch();
+        remove_nth_end ll=new remove_nth_end();
         ll.AddFirst(1);
         ll.AddFirst(2);
         ll.AddFirst(3);
@@ -53,7 +65,8 @@ public class isearch {
         ll.AddFirst(5);
         ll.AddFirst(6);
         ll.print();
-        System.out.println(ll.search(3));
-        System.out.println(ll.search(40));
+        ll.removen(3);
+        // ll.removen(3);
+        ll.print();
     }
 }
