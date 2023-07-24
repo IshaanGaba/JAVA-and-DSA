@@ -1,25 +1,27 @@
 package Stack;
+
 import java.util.Stack;
-public class reverse {
-    public static void reverses(Stack<Integer> s) {
+
+public class push_bottom {//O(n)
+    public static void pushb(Stack<Integer>s,int data) {
+        //base
         if(s.isEmpty()){
+            s.push(data);
             return;
         }
+
         int top=s.pop();
-        reverses(s);
-        System.out.println(top);
+        pushb(s,data);
         s.push(top);
-        //push at bottom
     }
     public static void main(String[] args) {
-        Stack<Integer> s=new Stack<>(); 
+        Stack<Integer> s=new Stack<>();
         s.push(1);
         s.push(2);
         s.push(3);
-        s.push(4);
         System.out.println(s);
-        reverses(s);
+        pushb(s, 4);
         System.out.println(s);
-        System.out.println();
+
     }
 }
