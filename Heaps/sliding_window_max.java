@@ -30,7 +30,7 @@ public class sliding_window_max {//O(nlog k)
         ans[0]=pq.peek().value;
         //for next k window
         for (int i = k; i < a.length; i++) {
-            while(pq.size()>0 && pq.peek().indx<=(i-k)){
+            while(pq.size()>0 && pq.peek().indx<=(i-k)){//need to see only the peek index...
                 pq.remove();
             }
             pq.add(new pair(i, a[i]));
