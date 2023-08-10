@@ -27,7 +27,7 @@ public class Set {
         }
                 
 
-        set.remove("nepal");
+        System.out.println(set.remove("nepal"));
         System.out.println(set);
 
         System.out.println(set.size());
