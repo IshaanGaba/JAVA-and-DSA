@@ -1,7 +1,7 @@
 package Hashing;
 import java.util.*;
 
-public class hashmap {
+public class Map {//map contains hashmap,linkedhashmap,treemap
     public static void main(String[] args) {
         HashMap<String,Integer> map=new HashMap<>();
         map.put("China", 150);
