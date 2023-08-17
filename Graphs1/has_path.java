@@ -1,8 +1,8 @@
 package Graphs1;
 
-import java.util.*;
+import java.util.ArrayList;
 
-public class dfs_traversal {
+public class has_path {
     static class edge{
         int src;
         int des;
@@ -38,21 +38,24 @@ public class dfs_traversal {
         graph[5].add(new edge(5, 3, 1));
         graph[5].add(new edge(5, 4, 1));
     }
-    public static void dfs(ArrayList<edge>[] graph,int curr,boolean vis[]) {
-        System.out.println(curr+" ");
-        vis[curr]=true;
-        for (int i = 0; i < graph[curr].size(); i++) {
-            edge e=graph[curr].get(i);
-            if(!vis[e.des]){
-                dfs(graph, e.des, vis);
+    public static boolean path(ArrayList<edge>[] graph,int src,int des,boolean vis[]){
+        if(src==des){
+            return true;
+        }
+        vis[src]=true;
+        for (int i = 0; i < graph[src].size(); i++) {
+            edge e=graph[src].get(i);
+            if(!vis[e.des] && path(graph, e.des, des, vis)){
+                return true;
             }
         }
+        return false;
     }
     public static void main(String[] args) {
         int v=6;
         @SuppressWarnings("unchecked")
         ArrayList<edge>[] graph=new ArrayList[v];
         create(graph);
-        dfs(graph,0, new boolean[graph.length]);
+        System.out.println(path(graph, 0, 6, new boolean[graph.length]));
     }
 }
