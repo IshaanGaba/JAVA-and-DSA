@@ -47,11 +47,11 @@ public class word_problem {
         return false;
     }
     public static void main(String[] args) {
-        String word[]={"i","like","samsung","sam"};
+        String word[]={"i","like","samsung","sung"};
         for (int i = 0; i < word.length; i++) {
             insert(word[i]);
         }
-        String s="ilikesamsung";
+        String s="";
         System.out.println(word_break(s));
     }
 }
