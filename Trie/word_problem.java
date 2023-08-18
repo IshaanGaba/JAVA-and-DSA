@@ -36,6 +36,9 @@ public class word_problem {
         return curr.eow;
     }
     public static boolean word_break(String s) {
+        if (s.isEmpty()) {
+            return true;
+        }
         if(root==null){
             return true;
         }
@@ -51,7 +54,7 @@ public class word_problem {
         for (int i = 0; i < word.length; i++) {
             insert(word[i]);
         }
-        String s="";
+        String s="ilikesam";
         System.out.println(word_break(s));
     }
 }
