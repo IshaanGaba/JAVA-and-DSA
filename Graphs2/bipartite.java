@@ -1,5 +1,5 @@
 package Graphs2;
-
+//O(V+E)
 import java.util.*;
 //use bfs---graph coloring --2 colors only
 public class bipartite {
