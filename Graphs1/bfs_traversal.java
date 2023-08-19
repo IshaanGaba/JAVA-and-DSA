@@ -1,9 +1,9 @@
 package Graphs1;
-
+//modified bfs -------------------->Graphs2
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
-
+//O(V+E)
 public class bfs_traversal {
     static class edge{
         int src;

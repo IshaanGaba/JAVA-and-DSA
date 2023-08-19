@@ -1,7 +1,8 @@
 package Graphs1;
+//O(V+E)
 
 import java.util.*;
-
+//modified dfs -------------------->Graphs2
 public class dfs_traversal {
     static class edge{
         int src;

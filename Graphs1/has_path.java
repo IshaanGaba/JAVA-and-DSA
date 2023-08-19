@@ -1,7 +1,7 @@
 package Graphs1;
 
 import java.util.ArrayList;
-
+//O(V+E)
 public class has_path {
     static class edge{
         int src;
