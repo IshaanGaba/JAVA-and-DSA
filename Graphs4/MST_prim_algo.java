@@ -1,7 +1,6 @@
 package Graphs4;
 
-import java.util.ArrayList;
-import java.util.PriorityQueue;
+import java.util.*;;
 //for undirected weighted graph
 public class MST_prim_algo {
     static class edge{
