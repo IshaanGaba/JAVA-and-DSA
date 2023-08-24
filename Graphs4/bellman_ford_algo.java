@@ -7,10 +7,10 @@ public class bellman_ford_algo {
         int src;
         int des;
         int wt;
-        public edge(int src,int des,int wt){
+        public edge(int src,int des,int w){
             this.src=src;
             this.des=des;
-            this.wt=wt;
+            this.wt=w;
         }
     }
     public static void create(ArrayList<edge>[] graph) {
