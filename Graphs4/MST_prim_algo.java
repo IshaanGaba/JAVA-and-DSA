@@ -1,6 +1,6 @@
 package Graphs4;
 
-//-------------O(V^2)
+//-------------O(V^2)--------------
 import java.util.*;;
 //for undirected weighted graph
 public class MST_prim_algo {
