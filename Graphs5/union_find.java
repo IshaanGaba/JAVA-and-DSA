@@ -21,11 +21,9 @@ public class union_find {
         if(rank[A]!=rank[B]){
             if(rank[A]>rank[B]){
                 par[B]=A;
-                rank[A]++;
             }
             else{
                 par[A]=B;
-                rank[B]++;
             }
         }
         else{
