@@ -1,5 +1,6 @@
 package Graphs5;
 //if matrix is given,in edge class use des,wt only .dont use src as many edges do not exist.and if we store in graph,wt-0 will be stored and least will be 0.
+//-------------O(V^2)
 import java.util.PriorityQueue;
 
 public class connecting_cities_mincost{

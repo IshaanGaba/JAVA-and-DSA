@@ -3,7 +3,7 @@ package Graphs5;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
-
+// O(V*K)  where k-stops
 //no need to pq.... only q will work
 public class cheapest_flight_kstops {
     static class edge{
