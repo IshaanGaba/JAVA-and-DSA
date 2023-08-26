@@ -1,5 +1,5 @@
 package DP1;
-
+//loops+ iteration +array to store elements
 public class fib_tabulation {//O(n)
     public static int fib(int n) {
         int dp[]=new int[n+1];

@@ -2,7 +2,7 @@ package DP1;
 
 import java.util.Arrays;
 
-public class climb_stair_memoization {
+public class climb_stair_memoization {//O(n)
     public static int count(int n,int dp[]) {
         if(n==0){
             return 1;

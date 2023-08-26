@@ -1,5 +1,5 @@
 package DP1;
-
+//recursion + array to store elemenets
 public class fib_memoization {//O(n)
     public static int fib(int n,int dp[]) {
         if(n==1 || n==0){
