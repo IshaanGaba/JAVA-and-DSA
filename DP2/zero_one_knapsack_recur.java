@@ -23,6 +23,6 @@ public class zero_one_knapsack_recur {
         int wt[]={2,5,1,3,4};
         int W=7;
         System.out.println(knapsack(val, wt, W, 5));
-
+        
     }
 }
