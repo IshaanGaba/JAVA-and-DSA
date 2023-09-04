@@ -1,7 +1,7 @@
 package DP6;
 
 import java.util.Arrays;
-
+//o(n^2)
 public class catalan_no_memoization {
     public static int catalan(int n,int dp[]) {
         if(n==0 || n==1){

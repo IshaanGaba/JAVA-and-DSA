@@ -1,5 +1,5 @@
 package DP6;
-
+//o(n^2)
 public class count_bst {
     public static int catalan(int n) {
        int dp[]=new int[n+1];

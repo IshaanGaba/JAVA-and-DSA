@@ -1,5 +1,6 @@
 package DP6;
 //at any moment up stroke should be greater than down stroke
+//o(n^2)
 public class mountain_valley {
     public static int catalan(int n) {
         int dp[]=new int[n+1];
