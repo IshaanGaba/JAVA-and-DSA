@@ -1,5 +1,5 @@
 package DP6;
-
+//same as lcs
 public class wildcard_matching {
     public static boolean match(String s,String p) {
         boolean dp[][]=new boolean[s.length()+1][p.length()+1];
