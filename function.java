@@ -11,7 +11,7 @@ public class function {// dec to bin ,bin to dec,//pallindrome no.
         return f;
     }
     public static boolean prime(int a) {
-        for(int i=2;i<=a/2;i++){
+        for(int i=2;i<=Math.sqrt(a);i++){
             if(a%i==0){
                 return false;
             }
