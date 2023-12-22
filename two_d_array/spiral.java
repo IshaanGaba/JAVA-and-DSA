@@ -14,10 +14,16 @@ public class spiral {
             }
             //bottom
             for(int j=ec-1;j>=sr;j--){
+                if(sr==er){//so that the middle no. whne odd matrix rows/cols does not repeated
+                    break;
+                }
                 System.out.print(m[er][j]+" ");
             }
             //left
             for(int i=er-1;i>sr;i--){
+                if(sc==ec){
+                    break;
+                }
                 System.out.print(m[i][sc]+" ");
             }
             sc++;
