@@ -6,7 +6,7 @@ public class sudoku {
         }
         //recursion
         int nextrow=row,nextcol=col+1;
-        if(col+1==9){
+        if(col+1==9){//-------------------------IMP-----------------------
             nextcol=0;
             nextrow=row+1;
         }
