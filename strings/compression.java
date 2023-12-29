@@ -4,7 +4,6 @@ package strings;
 public class compression {
     public static String comp(String s) {// O(n)
         StringBuilder sb=new StringBuilder("");
-        sb.del
         for(int i=0;i<s.length();i++){
             Integer c=1;//to convert to string later on
             while(i<s.length()-1 && s.charAt(i)==s.charAt(i+1)){
