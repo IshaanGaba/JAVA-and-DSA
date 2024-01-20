@@ -28,10 +28,10 @@ public class diameter_O_n2__nodes {
             return 0;
         }
         int lh=height(root.left);
-        int ld=height(root.left);
+        int ldiam=diameter1(root.left);
         int rh=height(root.right);
-        int rd=height(root.right);
-        return Math.max(Math.max(ld, rd),lh+rh+1);
+        int rdiam=diameter1(root.right);
+        return Math.max(Math.max(ldiam, rdiam),lh+rh+1);
     }
     public static void main(String[] args) {
         Node root=new Node(1);
