@@ -15,10 +15,12 @@ public class kadane {
             int cs = 0;// current sum
             int ms = Integer.MIN_VALUE;// max sum
             for (int i = 0; i < n; i++) {
-                cs += a[i];
-                if (cs < 0) {
-                    cs = 0;
-                }
+                // cs += a[i];
+                // if (cs < 0) {
+                //     cs = 0;
+                // }
+                // --------------------IMP----------------------------
+                cs=Math.max(a[i],cs+a[i]);// for -ve and +ve both nos.
                 ms = Math.max(ms, cs);
             }
             return ms;
