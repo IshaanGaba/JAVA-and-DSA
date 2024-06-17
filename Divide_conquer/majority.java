@@ -4,21 +4,18 @@ package Divide_conquer;
 
 public class majority {
     public static int major(int a[],int n) {
-        int m=n/2;
-        
-        for(int i=0;i<n;i++){
-            int c=0;
-            for (int j = 0; j < n; j++) {
-                if(a[i]==a[j]){
-                    c++;
-                }
-                
+        int c=0,ans=0;
+        for(int i=0;i<a.length;i++){
+            if(c==0){
+                ans=a[i];
             }
-            if(c>m){
-                return a[i];
+            if(ans==a[i]){
+                c++;
+            }else{
+                c--;
             }
         }
-        return -1;
+        return ans;
     }
     public static void main(String[] args) {
         int A[]={3, 3, 4, 2, 4, 4, 2, 4,4,4};

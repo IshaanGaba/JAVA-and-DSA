@@ -6,7 +6,7 @@ public class clearrange {
         return n&(a|b);
     }
     public static void main(String[] args) {
-        System.out.println(clearr(15, 2,7));
+        System.out.println(clearr(63,2,4));
     }
 }
 
