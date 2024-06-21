@@ -1,4 +1,27 @@
 public class knight_tour {
+    // -----------or----------------
+    public static boolean knight(int i,int j,int chess[][],int c) {
+        if(i<0|| j<0 || i>=chess.length || j>=chess[0].length || chess[i][j]!=-1){
+            return false;
+        }
+        if(c==(chess.length*chess.length-1)){
+            chess[i][j]=c;
+            print(chess);
+            //chess[i][j] = -1;
+            return true;
+        }
+        chess[i][j]=c;
+        if (knight(i + 2, j + 1, chess, c + 1)) return true;
+        if (knight(i + 1, j + 2, chess, c + 1)) return true;
+        if (knight(i - 1, j + 2, chess, c + 1)) return true;
+        if (knight(i - 2, j + 1, chess, c + 1)) return true;
+        if (knight(i - 2, j - 1, chess, c + 1)) return true;
+        if (knight(i - 1, j - 2, chess, c + 1)) return true;
+        if (knight(i + 1, j - 2, chess, c + 1)) return true;
+        if (knight(i + 2, j - 1, chess, c + 1)) return true;
+        chess[i][j]=-1;
+        return false;
+    }
     public static boolean isSafe(int n,int visit[][],int i,int j) {
         if(i>=n || j>=n || i<0 || j<0 || visit[i][j]!=-1){
             return false;
