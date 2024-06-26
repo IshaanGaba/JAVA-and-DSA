@@ -1,4 +1,7 @@
 // https://leetcode.com/problems/intersection-of-two-linked-lists/solutions/49785/java-solution-without-knowing-the-difference-in-len/ for solution understanding----------
+
+import org.w3c.dom.Node;
+
 public class intersection_ll {
     public static class Node{
         int data;
@@ -27,16 +30,19 @@ public class intersection_ll {
         Node tempA=headA;
         Node tempB=headB;
         while (tempA!=tempB) {
-            tempA=tempA.next;
-            tempB=tempB.next;
             if(tempA==null){
                 tempA=headB;
+            }else{
+                tempA=tempA.next;
             }
             if(tempB==null){
                 tempB=headA;
-            }
+            }else{
+                tempB=tempB.next;
+            }  
         }
         return tempA;
+        
         // while(tempA!=tempB){
         //     tempA=tempA==null?headB:tempA.next;
         //     tempB=tempB==null?headA:tempB.next;

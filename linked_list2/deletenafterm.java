@@ -1,5 +1,7 @@
 package linked_list2;
 
+import org.w3c.dom.Node;
+
 public class deletenafterm {
     public static class Node {
         int data;
@@ -35,37 +37,31 @@ public class deletenafterm {
     }
 
     public static void del(Node head, int n, int m) {
-        if (head == null || head.next == null) {
-            return;
+        Node current = head;
+    
+    while (current != null) {
+        // Skip M nodes
+        for (int i = 1; i < M && current != null; i++) {
+            current = current.next;
         }
-        Node temp = head;
-        while (temp != null && temp.next != null) {
+        //reach till mth node
+        // If we reached the end, break
+        if (current == null) {
+            break;
+        }
 
-            int i = 1;
-            while (i < n) {
-                temp = temp.next;
-                if (temp.next == null) {
-                    break;
-                }
-                i++;
-            }
-            Node left = temp;
-            if (temp.next == null) {
-                break;
-            }
-            i = 0;
-            while (i < m) {
-                temp = temp.next;
-                if (temp.next == null) {
-                    break;
-                }
-                i++;
-            }
-            i = 1;
-            Node last = temp;
-            left.next = last.next;
-            last.next = null;
-            temp = left.next;
+        // Start deleting N nodes
+        Node temp = current.next;
+        for (int j = 0; j < N && temp != null; j++) {
+            temp = temp.next;
+        }
+
+        // Link the M-th node to the (M+N+1)-th node
+        current.next = temp;
+        
+        // Move current to the next node to continue the process
+        current = temp;
+    }
         }
     }
 
