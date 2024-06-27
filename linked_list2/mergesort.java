@@ -1,4 +1,5 @@
 package linked_list2;
+//we can use an arraylist also to store all values,sort them and then make a new ll
 /*--------------nlogn-----------------
     1-middle-1st half ka last
     2-lefthalf righthalf
@@ -39,27 +40,26 @@ public class mergesort {
     private  static Node merge(Node lhead,Node rhead){
         Node merged=new Node(-1);
         Node temp=merged;
-
+        //no need to make a new linked list connect 1st with dummy and start other connection
         while(lhead!=null && rhead!=null){
             if(lhead.data<=rhead.data){
-                temp.next=lhead;
-                lhead=lhead.next;
+                temp.next = lhead;  // Link temp to lhead
+                temp = lhead;       // Move temp to lhead
+                lhead = lhead.next; // Move lhead to the next node in its list
             }
             else{
                 temp.next=rhead;
+                temp=rhead;
                 rhead=rhead.next;
             }
-            temp=temp.next;
+            
         }
-        while(lhead!=null){
+        if(lhead!=null){//join the temp to the remaining ll
             temp.next=lhead;
-            lhead=lhead.next;
-            temp=temp.next;
-        }
-        while(rhead!=null){
+           
+        }else{
             temp.next=rhead;
-            rhead=rhead.next;
-            temp=temp.next;
+            
         }
         return merged.next;
     }
@@ -86,8 +86,8 @@ public class mergesort {
         ll.AddFirst(1);
         ll.AddFirst(2);
         ll.AddFirst(3);
-        ll.AddFirst(4);
         ll.AddFirst(5);
+        ll.AddFirst(4);
         
         ll.print();
         head=merge_sort(head);

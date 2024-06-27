@@ -1,5 +1,7 @@
 package linked_list2;
 
+
+
 public class swapnodes {
 
     public static class Node {
@@ -35,39 +37,26 @@ public class swapnodes {
         System.out.println("null");
     }
     public static void swap(int x,int y) {
-        if(head==null || head.next==null){return;}
-        Node temp=head;
-        int i=1;
-        Node prev=null;
-        while (i<x) {
-            prev=temp;
-            temp=temp.next;
-            i++;
+        if (head == null || head.next == null) {
+            return ;
         }
-        Node left=temp;
-        Node prev1=null;
-        while (i<y) {
-            prev1=temp;
-            temp=temp.next;
-            i++;
+
+        // Initialize pointers
+        Node first = head, second = head, temp = head;
+        int size = 0;
+
+        for (int i = 1; i <= y-1; i++) {
+            if(i==x){
+                first=temp;
+            }
+            temp = temp.next;
         }
-        Node right=temp;
-        if(right == null || left ==null){
-            return;
-        }
-        if(prev!=null){
-            prev.next=right;
-        }else{
-            head=right;
-        }
-        if(prev1!=null){
-            prev1.next=left;
-        }else{
-            head=left;
-        }
-        Node nextl=left.next;
-        left.next=right.next;
-        right.next=nextl;
+        second = temp;
+
+        int t = first.data;
+        first.data = second.data;
+        second.data = t;
+
     }
     public static void main(String[] args) {
         swapnodes l = new swapnodes();
@@ -79,7 +68,7 @@ public class swapnodes {
         l.AddFirst(15);
         l.AddFirst(10);
         l.print();
-        swap(1, 6);
+        swap(3,5);
         l.print();
     }
 }
