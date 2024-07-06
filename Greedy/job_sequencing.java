@@ -1,35 +1,58 @@
 package Greedy;
-//deadline and profit
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
+import java.util.Collections;
 
+import Greedy.job_sequencing.Job;
+
+/**
+ * job_sequencing--------wrong code in notebook
+ */
 public class job_sequencing {
-    public static int sequence(int a[][]) {
-        int profit=0;
-        int job[][]=new int[a.length][3];
-        ArrayList<Integer> ans=new ArrayList<>();
-        for (int i = 0; i < job.length; i++) {
-            job[i][0]=i;
-            job[i][1]=a[i][0];
-            job[i][2]=a[i][1];
+    static class Job{
+        int id;
+        int deadline;
+        int profit;
+        public Job(int x,int y,int z){
+            this.id=x;
+            this.deadline=y;
+            this.profit=z;
         }
-        Arrays.sort(job, Comparator.comparingDouble(o->o[2]));//ascending order
-        
-        int time=0;
-        for (int i=job.length-1;i>=0;i--) {
-            if(time<job[i][1]){
-                ans.add(job[i][0]);
-                profit+=job[i][2];
-                time++;
+    }
+    public static void jobs(ArrayList<Job> arr) {
+        int maxdeadline=Integer.MIN_VALUE;
+        for (int i = 0; i < arr.size(); i++) {
+            maxdeadline=Math.max(maxdeadline,arr.get(i).deadline);
+        }
+        Collections.sort(arr,(a,b)->b.profit-a.profit);//descendiing
+        int slot[]=new int[maxdeadline];
+        for (int i = 0; i < slot.length; i++) {
+            slot[i]=-1;
+        }
+        int profit=0;
+        int c=0;
+        for (int i = 0; i < arr.size(); i++) {
+            for (int j = arr.get(i).deadline-1; j >=0; j--) {
+                if(slot[j]==-1){
+                    slot[j]=arr.get(i).id;
+                    profit+=arr.get(i).profit;
+                    c++;
+                    break;
+                }
             }
         }
-        System.out.println(ans);
-        return profit;
+        System.out.println(c);
+        System.out.println(profit);
     }
     public static void main(String[] args) {
-        int a[][]={{4,20},{1,10},{1,40},{1,30}};
-        System.out.println(sequence(a));
+        ArrayList<Job> arr=new ArrayList<>();
+        int n=4;
+        int d[]={4,1,1,1};
+        int p[]={40,10,40,30};
+        for (int i = 1; i <= p.length; i++) {
+            arr.add(new Job(i, d[i-1], p[i-1]));
+        }
+        jobs(arr);
+
     }
 }
