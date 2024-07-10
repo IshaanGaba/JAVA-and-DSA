@@ -27,18 +27,21 @@ public class klevel {
         
     }
     //iterative ---level order
-    public static void level1(Node root,int k,int n) {
+    public static void level1(Node root,int k) {
         if(root==null){
             return;
         }
         Queue<Node> q=new LinkedList<>();
         q.add(root);
         q.add(null);
-    
+        int n=1;
         while (!q.isEmpty()) {
             Node cur=q.remove();
             if(cur==null){
                 n++;
+                if(n>k){
+                    break;
+                }
                 // System.out.println();
                 if(q.isEmpty()){
                     break;

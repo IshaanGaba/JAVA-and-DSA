@@ -15,11 +15,13 @@ public class transform_sum {
         if(root==null){
             return 0;
         }
+        int data=root.data;
         int left=sum(root.left);
         int right=sum(root.right);
-        int data=root.data;
-        root.data=left+right;
-        return data+root.data;
+        int leftc=root.left==null?0:root.left.data;
+        int rightc=root.right==null?0:root.right.data;
+        root.data=left+right+leftc+rightc;
+        return data;
     }
     public static void preorder(Node root) {
         if(root==null){
