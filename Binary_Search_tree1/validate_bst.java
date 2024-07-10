@@ -7,15 +7,24 @@ public class validate_bst {
         public Node(int data){
             this.data=data;
         }
-    }
+    }//OR
+    public static boolean validate(Node root,int min,int max) {
+        if(root==null){
+            return true;
+        }
+        if(root.data>=max || root.data<=min){
+            return false;
+        }
+        return validate(root.left,min,root.data) && validate(root.right,root.data,max);
+    }//OR
     public static boolean isvalid(Node root,Node min,Node max) {
         if(root==null){
             return true;
         }
-        if(min!=null && root.data<min.data){
+        if(min!=null && root.data<=min.data){
             return false;
         }
-        if(max!=null && max.data<root.data){
+        if(max!=null && max.data<=root.data){
             return false;
         }
         return isvalid(root.left, min, root) && isvalid(root.right, root, max);
