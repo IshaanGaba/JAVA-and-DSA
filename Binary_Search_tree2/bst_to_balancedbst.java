@@ -19,14 +19,14 @@ public class bst_to_balancedbst {
         inorder(root.right, list);
 
     }
-    public static Node createBST(Node root,int s,int e,ArrayList<Integer>list) {
+    public static Node createBST(int s,int e,ArrayList<Integer>list) {
         if(s>e){
             return null;
         }
         int mid=(s+e)/2;
-        root=new Node(list.get(mid));
-        root.left=createBST(root.left, s, mid-1, list);
-        root.right=createBST(root.right,mid+1, e, list);
+        Node root=new Node(list.get(mid));
+        root.left=createBST(s, mid-1, list);
+        root.right=createBST(mid+1, e, list);
         return root;
     }
     public static void preorder(Node root) {
@@ -39,7 +39,7 @@ public class bst_to_balancedbst {
     public static Node balance(Node root) {
         ArrayList<Integer> list=new ArrayList<>();
         inorder(root, list);
-        root=createBST(root, 0, list.size()-1, list);
+        root=createBST(0, list.size()-1, list);
         return root;
     }
     public static void main(String[] args) {

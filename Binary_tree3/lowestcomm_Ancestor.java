@@ -13,7 +13,7 @@ public class lowestcomm_Ancestor {
             this.right=null;
         }
     }
-    public static Node  lca1(Node root,int n1,int n2) {//without extra space
+    public static Node  lca1(Node root,int n1,int n2) {//without extra space exxept call stack
         if(root==null ||root.data==n1 || root.data==n2){
             return root;
         }

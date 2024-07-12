@@ -8,15 +8,15 @@ public class sortedarr_balancedbst {
             this.data=data;
         }
     }
-    public static Node createBST(int a[],int s,int e,Node root) {
+    public static Node createBST(int a[],int s,int e) {
         if(s>e){
             return null;
         }
         int mid=(s+e)/2;
-        root=new Node(a[mid]);//or Node root=----if root not taken as parameter
+        Node root=new Node(a[mid]);
         
-        root.left=createBST(a, s, mid-1, root.left);
-        root.right=createBST(a, mid+1, e, root.right);
+        root.left=createBST(a, s, mid-1);
+        root.right=createBST(a, mid+1, e);
         return root;
 
     }
@@ -29,8 +29,8 @@ public class sortedarr_balancedbst {
     }
     public static void main(String[] args) {
         int arr[]={3,5,6,8,10,11,12};
-        Node root=null;
-        root=createBST(arr, 0, arr.length-1, root);
+        
+        Node root=createBST(arr, 0, arr.length-1);
         preorder(root);
     }
 }
