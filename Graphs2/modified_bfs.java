@@ -15,14 +15,15 @@ public class modified_bfs{//O(V+E)
         }
 
         graph[0].add(new edge(0, 1));
-        graph[0].add(new edge(0, 2));
+        graph[0].add(new edge(0, 3));
         
         graph[1].add(new edge(1, 2));
         
-        graph[2].add(new edge(2, 0));
+        // graph[2].add(new edge(2, 0));
         graph[2].add(new edge(2, 1));
 
         graph[3].add(new edge(3, 4));
+        graph[3].add(new edge(3, 0));
         
         graph[4].add(new edge(4, 3));
         graph[4].add(new edge(4 , 5));
@@ -38,14 +39,15 @@ public class modified_bfs{//O(V+E)
     public static void bfsUtil(ArrayList<edge>[] graph,int c,boolean vis[]) {
         Queue<Integer> q=new LinkedList<>();
         q.add(c);
+        vis[c]=true;
         while(!q.isEmpty()){
             int curr=q.remove();
-            vis[curr]=true;
             System.out.println(curr+" ");
             for (int i = 0; i < graph[curr].size(); i++) {
                 edge e=graph[curr].get(i);
                 if(!vis[e.des]){
-                    bfsUtil(graph, e.des, vis);
+                    q.add(e.des);
+                    vis[e.des]=true;
                 }
             }
         }

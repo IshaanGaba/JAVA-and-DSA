@@ -44,10 +44,10 @@ public class bfs_traversal {
         Queue<Integer> q=new LinkedList<>();
         
         q.add(0);
+        vis[0]=true;
         while (!q.isEmpty()) {
             int curr=q.remove();
             System.out.println(curr+" ");
-            vis[curr]=true;
             for (int i = 0; i < graph[curr].size(); i++) {
                 edge e=graph[curr].get(i);
                 if(!vis[e.des]){
