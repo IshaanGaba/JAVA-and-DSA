@@ -14,6 +14,12 @@ public class target_sum_subset{
                 else if(dp[i-1][j]==true){
                     dp[i][j]=true;
                 }
+                //OR-------------
+                // if(n[i-1]<=j){
+                //     dp[i][j]=dp[i-1][j-n[i-1]]||dp[i-1][j];//include or exclude
+                // }else{
+                //     dp[i][j]=dp[i-1][j];
+                // }
             }
         }
         return dp[n.length][target];

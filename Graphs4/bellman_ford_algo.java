@@ -47,6 +47,15 @@ public class bellman_ford_algo {
                 }
             }
         } 
+        //for detecting negative cycle if present
+        // for (int j = 0; j < graph.length; j++) {
+        //     for (int k = 0; k < graph[j].size(); k++) {
+        //         edge e =graph[j].get(k);
+        //         if(dis[e.src]!=Integer.MAX_VALUE &&dis[e.src]+e.wt<dis[e.des]){
+        //             return true;//negatice cycle present
+        //         }
+        //     }
+        // }
         for (int i = 0; i < dis.length; i++) {
             System.out.println(dis[i]);
         }
