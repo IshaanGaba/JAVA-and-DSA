@@ -16,6 +16,22 @@ public class root_leaf_path {
         }
         System.out.println();
     }
+    //correct code is this(done)
+    public static void path(Node root,ArrayList<ArrayList<Integer>> ans,ArrayList<Integer>a){
+        if(root==null){
+            return;
+        }
+        a.add(root.data);
+        if(root.left==null && root.right==null){
+            ans.add(new ArrayList<>(a));
+            
+        }else{
+        path(root.left,ans,a);
+        path(root.right,ans,a);
+            
+        }
+        a.remove(a.size()-1);
+    }
     public static void path1(Node root,ArrayList<Integer> path) {
         if(root==null){
             return;
@@ -28,6 +44,7 @@ public class root_leaf_path {
         path1(root.right,path);
         path.remove(path.size()-1);
     }
+    
     public static void main(String[] args) {
         Node root=new Node(8);
         root.left=new Node(5);

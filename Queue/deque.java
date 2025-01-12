@@ -17,6 +17,5 @@ public class deque {
         System.out.println(d);
         System.out.println(d.getFirst());
         System.out.println(d.getLast());
-        
     }
 }

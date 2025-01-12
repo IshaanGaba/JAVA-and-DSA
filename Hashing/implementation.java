@@ -15,9 +15,9 @@ public class implementation {
             }
         }
 
-        private int n;// n
+        private int n;// n-no of keys
         private int N;// n
-        private LinkedList<Node> buckets[];// N
+        private LinkedList<Node> buckets[];// N-size of array
         @SuppressWarnings("unchecked")
         public HashMap() {
             this.N = 4;
@@ -77,7 +77,7 @@ public class implementation {
         public V get(K key) {
             int bi = hashFunction(key);
             int di = searchInLL(key, bi);
-
+            
             if (di != -1) {
                 Node node = buckets[bi].get(di);
                 return node.value;
