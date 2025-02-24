@@ -2,6 +2,29 @@ package array;
 
 //this does not work for all -ve no.
 public class kadane {
+    //printing kadane
+    public static int kadanes(int a[]){
+        int max=Integer.MIN_VALUE;
+        int sum=0;
+        int start=0;
+        int endstart=start;
+        int endlast=0;
+        for (int i = 0; i < a.length; i++) {
+            if(sum==0){
+                start=i;
+            }
+            sum+=a[i];
+            if(sum>max){
+                max=sum;
+                endstart=start;
+                endlast=i;
+            }
+            if(sum<0){
+                sum=0;
+            }
+        }
+        return max;
+    }
     public static int kadanesum(int a[]) {
         int n = a.length;
         int z = 0;
